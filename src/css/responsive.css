@@ -1,0 +1,58 @@
+@media (max-width: 1280px) {
+    .character-select .character-list{
+        max-width: 530px;
+    }
+
+    .character-select .character-list .character{
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .character-select .big-character .name .crossbone{
+        display: none;
+    }
+
+    .character-select .character-list{
+        max-width: 400px;
+    }
+
+    .character-select .character-list .character{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    main{
+        padding: 0 5px;
+        justify-content: start;
+    }
+
+    .header .title{
+        font-size: 35px;
+    }
+
+    .character-select .big-character{
+        display: none;
+    }
+
+    .character-select .character-list .character{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 515px) {
+    .header .title{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 390px) {
+    .header .title{
+        font-size: 23px;
+    }
+}
+

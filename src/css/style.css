@@ -1,0 +1,181 @@
+body {
+    background: var(--secondary-color);
+}
+
+body::before {
+    content: '';
+    background-image: url('../images/bg-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header .title {
+    color: var(--light-title-color);
+    font-family: 'henrm', 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 102px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px var(--dark-title-color);
+}
+
+.character-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-select .big-character {
+    text-align: center;
+    width: 30%;
+    height: 83vh;
+    position: relative;
+}
+
+.character-select .big-character img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+}
+
+.character-select .big-character .name::before {
+    content: '';
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+
+.character-select .big-character .name h2 {
+    color: var(--default-color);
+    font-family: budeboned, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    font-size: 47px;
+    text-shadow: 2px 2px 0 #969696, 2px -2px 0 #000, -2px 2px 0 #a0a0a0, -2px -2px 0 #000, 2px 0px 0 #888888, 0px 2px 0 #000, -2px 0px 0 #848484, 0px -2px 0 #000;
+}
+
+.character-select .big-character .name .crossbone {
+    position: absolute;
+    font-size: 50px;
+    bottom: 30px;
+    font-family: 'budeboned';
+    color: var(--default-color);
+
+}
+
+.character-select .big-character .name .crossbone.left {
+    left: 10px;
+}
+
+.character-select .big-character .name .crossbone.right {
+    right: 10px;
+}
+
+
+.character-select .big-character.character-player-1 .name::before {
+    background-color: var(--main-blue-color);
+    transform: skew(-20deg);
+    left: 5px;
+}
+
+.character-select .big-character.character-player-2 .name::before {
+    background-color: var(--main-red-color);
+    transform: skew(-20deg);
+    right: 5px;
+}
+
+.character-select .character-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    justify-content: center;
+    gap: 12px;
+}
+
+.character-select .character-list .character {
+    border: 4px solid var(--dark-title-color);
+    background-color: var(--default-color);
+    width: 25%;
+    height: 110px;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    transition: 0.15 ease-in-out;
+    transform: rotate(4deg);
+}
+
+.character-select .character-list .character img {
+    width: 100%;
+    height: 100%;
+}
+
+.character-select .character-list .character.selected {
+    border: 2px solid var(--medium-blue-color);
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.character-select .character-list .character:hover {
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+    z-index: 2;
+}
+
+.character-select .character-list .character.player-2-selected {
+    border: 2px solid var(--light-red-color);
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.character-select .character-list .character.player-2-selected:hover {
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+    z-index: 2;
+}
+
+.character-select .character-list .character .tag {
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: var(--default-color);
+    transition: 0.3s ease-in-out;
+}
+
+.character-select .character-list .character.selected .tag {
+    display: block;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.character-select .character-list .character.player-2-selected .tag {
+    display: block;
+    animation: text-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}

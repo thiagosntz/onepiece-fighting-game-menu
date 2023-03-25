@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+/* 
+    font-family: 'Cinzel', serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+/* 
+    font-family: 'Amatic SC', cursive;
+*/
+
+@font-face {
+    font-family: 'henrm';
+    src: url('../fonts/HENRM___.TTF');
+}
+
+@font-face {
+    font-family: 'booter';
+    src: url('../fonts/BooterFiveZero-aEm.ttf');
+}
+
+@font-face {
+    font-family: 'budeboned';
+    src: url('../fonts/bu\ DeBoned.ttf');
+}

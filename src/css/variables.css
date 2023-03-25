@@ -1,0 +1,19 @@
+:root {
+    --main-red-color: #D60223;
+    --medium-red-color: #f89284;
+    --light-red-color: #ffbebe;
+
+    --light-brown-color: #ebd5d2;
+
+    --main-blue-color: #0271F7;
+    --medium-blue-color: #d3ffff;
+    --light-blue-color: #8fbff8;
+
+    --light-purple-color: #c2c2f1;
+
+    --light-title-color: #faefd8;
+    --dark-title-color: #feb53a;
+
+    --default-color: #ffffff;
+    --secondary-color: #000000;
+}
